@@ -40,7 +40,7 @@ const server = http.createServer((req, res) => {
   if (url === "/message" && method === "POST") {
     // we listen to sertain events
     // the data event will be fired whenever a new chunk(data piece) is ready to be read
-    // second argument is a function that will be executed for every event(first ergument)
+    // second argument is a function that will be executed for every event(first argument)
     // here we collect chunks into body
     const body = [];
     req.on("data", (chunk) => {
@@ -66,7 +66,7 @@ const server = http.createServer((req, res) => {
   // hard exit the loop and therefor programm shut down
   //   process.exit();
   // set a new header
-  // it will attach a header to our response where we pass some mete information(Content-Type) saying that the type of a content, which will also be a part of response, is html
+  // it will attach a header to our response where we pass some meta information(Content-Type) saying that the type of a content, which will also be a part of response, is html
   res.setHeader("Content-Type", "text/html");
   // write allows to write some code to the response higher in text/html
   res.write("<html>");
