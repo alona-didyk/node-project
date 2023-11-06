@@ -1,8 +1,7 @@
-// it enables us to work with a file system
-// fs modules is a node's core modules shipping together with node js
+const http = require("http");
 const fs = require("fs");
+const routes = require("./routes");
 
-// this method will write a file to out hard drive
-// first argument is a path to the file
-// second argument is a content of this file
-fs.writeFileSync("hello.txt", "Hello from Node.js");
+const server = http.createServer(routes);
+
+server.listen(3000);
