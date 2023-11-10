@@ -18,6 +18,7 @@ const requestHandler = (req, res) => {
     );
     res.write("</body>");
     // we put return to return from this anonymous function and not execute the html code bellow
+    // we have to return to prevent the execution of the code after this statement
     return res.end();
   }
   if (url === "/message" && method === "POST") {
