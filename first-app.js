@@ -59,7 +59,7 @@
 // app.use(shopRoutes);
 
 // app.use((req, res, next) => {
-//   // status - set a 404 error
+// status - set a 404 error
 //   res.status(404).sendFile(path.join(__dirname, "views", "404.html"));
 // });
 
