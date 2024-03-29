@@ -31,15 +31,53 @@
 // };
 // person.greet();
 
-const hobbies = ["Sports", "Cooking", 1, true];
+// const printName = ({ name }) => {
+//   console.log(name);
+// };
+// printName(person);
+
+// const { name, age } = person;
+// console.log(name, age);
+
+// const hobbies = ["Sports", "Cooking", 1, true];
 // to loop
 // for (let hobby of hobbies) {
 //   console.log(hobby);
 // }
 // will return a new array
-console.log(
-  hobbies.map((hobby) => {
-    return "Hobby: " + hobby;
-  })
-);
-console.log(hobbies);
+// console.log(
+//   hobbies.map((hobby) => {
+//     return "Hobby: " + hobby;
+//   })
+// );
+// console.log(hobbies);
+
+// const coppiedArr = hobbies.slice();
+// const coppiedArr = [...hobbies];
+
+// const toArray = (...args) => {
+//   return [args];
+// };
+
+const fetchData = () => {
+  const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Done");
+    }, 1500);
+  });
+  return promise;
+};
+setTimeout(() => {
+  console.log("Timer is done");
+  fetchData
+    .then((text) => {
+      console.log(text);
+      return fetchData;
+    })
+    .then((text) => {
+      console.log(text);
+    });
+}, 2000);
+
+console.log("Hello");
+console.log("Hi");
