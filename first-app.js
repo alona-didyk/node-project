@@ -75,7 +75,7 @@ const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 
 app.use(bodyParser.urlencoded({ extended: false }));
-// static serves static files
+// static serves static files, ex. css files
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/admin', adminRoutes);
