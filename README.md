@@ -180,3 +180,28 @@ When you start the server (`node app.js`) and visit `http://localhost:3000`, the
 - **Easy to Maintain**: Dynamic content can be injected into templates, reducing the need to modify HTML files manually.
 
 This approach makes it easier to manage your application’s structure and allows you to create dynamic, data-driven web pages efficiently.
+
+**app.set()** allows to set any value globally on our express application
+
+app.set('view engine', 'pug');
+**where to fund this engine**
+app.set('view', 'view')
+
+**res.render()** will use the default template engine and then render it
+
+**handlebars**
+
+const expressHbs = require('express-handlebars');
+
+const app = express();
+
+app.engine('handlebars', expressHbs());
+app.set('view engine', 'hbs');
+app.set('views', 'views');
+
+**ejs**
+
+app.set('view engine', 'ejs');
+app.set('views', 'views');
+
+instead of having a single layout ejs uses includes which has shared parts of view
